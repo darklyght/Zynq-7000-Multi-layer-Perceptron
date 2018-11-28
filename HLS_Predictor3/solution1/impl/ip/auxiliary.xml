@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="predictor3" xd:componentRef="predictor3" xd:initiationInterval="3619" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_BUS_CTRL" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="bram1[]" xd:originalName="bram1" xd:direction="inout" xd:interfaceRef="bram1_PORTA" xd:busTypeRef="bram" xd:arraySize="2048" xd:dataWidth="32"/>
+  <xd:arg xd:name="bram2[]" xd:originalName="bram2" xd:direction="inout" xd:interfaceRef="bram2_PORTA" xd:busTypeRef="bram" xd:arraySize="2048" xd:dataWidth="32"/>
+  <xd:arg xd:name="bram3[]" xd:originalName="bram3" xd:direction="inout" xd:interfaceRef="bram3_PORTA" xd:busTypeRef="bram" xd:arraySize="2048" xd:dataWidth="32"/>
+  <xd:arg xd:name="bram4[]" xd:originalName="bram4" xd:direction="inout" xd:interfaceRef="bram4_PORTA" xd:busTypeRef="bram" xd:arraySize="2048" xd:dataWidth="32"/>
+  <xd:arg xd:name="weight[]" xd:originalName="weight" xd:direction="in" xd:interfaceRef="weight_PORTA" xd:busTypeRef="bram" xd:arraySize="2048" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="3618" xd:worst-case="3618" xd:average-case="3618"/>
+  <xd:resourceEstimates xd:LUT="8514" xd:FF="2552" xd:BRAM="8" xd:DSP="16"/>
+</xd:acceleratorMap>

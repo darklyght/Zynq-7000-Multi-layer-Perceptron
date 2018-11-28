@@ -1,0 +1,802 @@
+
+
+================================================================
+== Vivado HLS Report for 'predictor'
+================================================================
+* Date:           Fri Nov 02 12:50:11 2018
+
+* Version:        2016.3 (Build 1682563 on Mon Oct 10 19:41:59 MDT 2016)
+* Project:        HLS_Predictor
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.40|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  94210|  94210|  94211|  94211|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+        |                 |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1         |  75328|  75328|      2354|          -|          -|    32|    no    |
+        | + Loop 1.1      |   2352|   2352|       147|          -|          -|    16|    no    |
+        |  ++ Loop 1.1.1  |    144|    144|         9|          -|          -|    16|    no    |
+        |- Loop 2         |  18880|  18880|       590|          -|          -|    32|    no    |
+        | + Loop 2.1      |    588|    588|       147|          -|          -|     4|    no    |
+        |  ++ Loop 2.1.1  |    144|    144|         9|          -|          -|    16|    no    |
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 25
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond5)
+	14  / (exitcond5)
+3 --> 
+	4  / (!exitcond4)
+	2  / (exitcond4)
+4 --> 
+	5  / (!exitcond3)
+	13  / (exitcond3)
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	4  / true
+13 --> 
+	3  / true
+14 --> 
+	15  / (!exitcond2)
+15 --> 
+	16  / (!exitcond1)
+	14  / (exitcond1)
+16 --> 
+	17  / (!exitcond)
+	25  / (exitcond)
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	16  / true
+25 --> 
+	15  / true
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: StgValue_26 (3)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i32]* %bram) nounwind, !map !7
+
+ST_1: StgValue_27 (4)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @predictor_str) nounwind
+
+ST_1: StgValue_28 (5)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecMemCore([2048 x i32]* %bram, [1 x i8]* @p_str, [12 x i8]* @p_str1, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: StgValue_29 (6)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecInterface([2048 x i32]* %bram, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 2048, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: StgValue_30 (7)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:18
+:4  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [9 x i8]* @p_str4, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: StgValue_31 (8)  [1/1] 1.57ns  loc: HLS_Predictor/core.cpp:21
+:5  br label %.loopexit
+
+
+ <State 2>: 1.94ns
+ST_2: i (10)  [1/1] 0.00ns
+.loopexit:0  %i = phi i6 [ 0, %0 ], [ %i_2, %.loopexit.loopexit ]
+
+ST_2: exitcond5 (11)  [1/1] 1.94ns  loc: HLS_Predictor/core.cpp:21
+.loopexit:1  %exitcond5 = icmp eq i6 %i, -32
+
+ST_2: empty (12)  [1/1] 0.00ns
+.loopexit:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32) nounwind
+
+ST_2: i_2 (13)  [1/1] 1.72ns  loc: HLS_Predictor/core.cpp:21
+.loopexit:3  %i_2 = add i6 %i, 1
+
+ST_2: StgValue_36 (14)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:21
+.loopexit:4  br i1 %exitcond5, label %.preheader7.preheader, label %.preheader9.preheader
+
+ST_2: tmp_8 (16)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:21
+.preheader9.preheader:0  %tmp_8 = trunc i6 %i to i5
+
+ST_2: tmp (17)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+.preheader9.preheader:1  %tmp = call i9 @_ssdm_op_BitConcatenate.i9.i5.i4(i5 %tmp_8, i4 0)
+
+ST_2: tmp_cast (18)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+.preheader9.preheader:2  %tmp_cast = zext i9 %tmp to i11
+
+ST_2: tmp_11 (19)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+.preheader9.preheader:3  %tmp_11 = or i9 %tmp, 15
+
+ST_2: sum2 (20)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+.preheader9.preheader:4  %sum2 = call i11 @_ssdm_op_BitConcatenate.i11.i2.i9(i2 -2, i9 %tmp_11)
+
+ST_2: sum5_cast (21)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+.preheader9.preheader:5  %sum5_cast = zext i11 %sum2 to i32
+
+ST_2: bram_addr_4 (22)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:28
+.preheader9.preheader:6  %bram_addr_4 = getelementptr [2048 x i32]* %bram, i32 0, i32 %sum5_cast
+
+ST_2: StgValue_44 (23)  [1/1] 1.57ns  loc: HLS_Predictor/core.cpp:22
+.preheader9.preheader:7  br label %.preheader9
+
+ST_2: StgValue_45 (82)  [1/1] 1.57ns  loc: HLS_Predictor/core.cpp:34
+.preheader7.preheader:0  br label %.preheader7
+
+
+ <State 3>: 1.91ns
+ST_3: j (25)  [1/1] 0.00ns
+.preheader9:0  %j = phi i5 [ %j_2, %5 ], [ 0, %.preheader9.preheader ]
+
+ST_3: exitcond4 (26)  [1/1] 1.91ns  loc: HLS_Predictor/core.cpp:22
+.preheader9:1  %exitcond4 = icmp eq i5 %j, -16
+
+ST_3: empty_4 (27)  [1/1] 0.00ns
+.preheader9:2  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_3: j_2 (28)  [1/1] 1.72ns  loc: HLS_Predictor/core.cpp:22
+.preheader9:3  %j_2 = add i5 %j, 1
+
+ST_3: StgValue_50 (29)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:22
+.preheader9:4  br i1 %exitcond4, label %.loopexit.loopexit, label %.preheader8.preheader
+
+ST_3: tmp_16 (31)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:22
+.preheader8.preheader:0  %tmp_16 = trunc i5 %j to i4
+
+ST_3: tmp_4 (32)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+.preheader8.preheader:1  %tmp_4 = call i8 @_ssdm_op_BitConcatenate.i8.i4.i4(i4 %tmp_16, i4 0)
+
+ST_3: tmp_4_cast (33)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+.preheader8.preheader:2  %tmp_4_cast = zext i8 %tmp_4 to i10
+
+ST_3: StgValue_54 (34)  [1/1] 1.57ns  loc: HLS_Predictor/core.cpp:24
+.preheader8.preheader:3  br label %.preheader8
+
+ST_3: StgValue_55 (80)  [1/1] 0.00ns
+.loopexit.loopexit:0  br label %.loopexit
+
+
+ <State 4>: 4.55ns
+ST_4: k (36)  [1/1] 0.00ns
+.preheader8:0  %k = phi i5 [ %k_2, %1 ], [ 0, %.preheader8.preheader ]
+
+ST_4: sum (37)  [1/1] 0.00ns
+.preheader8:1  %sum = phi i28 [ %sum_2, %1 ], [ 0, %.preheader8.preheader ]
+
+ST_4: k_cast1 (38)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:24
+.preheader8:2  %k_cast1 = zext i5 %k to i9
+
+ST_4: exitcond3 (39)  [1/1] 1.91ns  loc: HLS_Predictor/core.cpp:24
+.preheader8:3  %exitcond3 = icmp eq i5 %k, -16
+
+ST_4: empty_5 (40)  [1/1] 0.00ns
+.preheader8:4  %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_4: k_2 (41)  [1/1] 1.72ns  loc: HLS_Predictor/core.cpp:24
+.preheader8:5  %k_2 = add i5 %k, 1
+
+ST_4: StgValue_62 (42)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:24
+.preheader8:6  br i1 %exitcond3, label %2, label %1
+
+ST_4: sum1 (44)  [1/1] 1.84ns  loc: HLS_Predictor/core.cpp:25
+:0  %sum1 = add i9 %tmp, %k_cast1
+
+ST_4: sum1_cast (45)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+:1  %sum1_cast = zext i9 %sum1 to i32
+
+ST_4: bram_addr (46)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+:2  %bram_addr = getelementptr [2048 x i32]* %bram, i32 0, i32 %sum1_cast
+
+ST_4: bram_load (47)  [2/2] 2.71ns  loc: HLS_Predictor/core.cpp:25
+:3  %bram_load = load i32* %bram_addr, align 4
+
+ST_4: tmp1 (48)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:24
+:4  %tmp1 = call i10 @_ssdm_op_BitConcatenate.i10.i5.i5(i5 -16, i5 %k)
+
+ST_4: sum3 (49)  [1/1] 1.84ns  loc: HLS_Predictor/core.cpp:24
+:5  %sum3 = add i10 %tmp1, %tmp_4_cast
+
+ST_4: tmp_18 (59)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:24
+:0  %tmp_18 = trunc i28 %sum to i15
+
+ST_4: tmp_7 (60)  [1/1] 1.91ns  loc: HLS_Predictor/core.cpp:27
+:1  %tmp_7 = icmp eq i5 %j, 15
+
+ST_4: StgValue_71 (61)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:27
+:2  br i1 %tmp_7, label %3, label %4
+
+ST_4: tmp_9 (63)  [1/1] 1.96ns  loc: HLS_Predictor/core.cpp:30
+:0  %tmp_9 = add i15 %tmp_18, 4096
+
+ST_4: tmp_11_cast (64)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:30
+:1  %tmp_11_cast = zext i15 %tmp_9 to i32
+
+ST_4: sigmoid_lut_addr (65)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:30
+:2  %sigmoid_lut_addr = getelementptr [8192 x i8]* @sigmoid_lut, i32 0, i32 %tmp_11_cast
+
+ST_4: sigmoid_lut_load (66)  [2/2] 2.39ns  loc: HLS_Predictor/core.cpp:30
+:3  %sigmoid_lut_load = load i8* %sigmoid_lut_addr, align 1
+
+ST_4: tmp2 (68)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:22
+:5  %tmp2 = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 -32, i5 %j)
+
+ST_4: sum7 (69)  [1/1] 1.84ns  loc: HLS_Predictor/core.cpp:22
+:6  %sum7 = add i11 %tmp2, %tmp_cast
+
+ST_4: StgValue_78 (75)  [1/1] 2.71ns  loc: HLS_Predictor/core.cpp:28
+:0  store i32 256, i32* %bram_addr_4, align 4
+
+ST_4: StgValue_79 (76)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:29
+:1  br label %5
+
+
+ <State 5>: 2.71ns
+ST_5: bram_load (47)  [1/2] 2.71ns  loc: HLS_Predictor/core.cpp:25
+:3  %bram_load = load i32* %bram_addr, align 4
+
+ST_5: sum3_cast (50)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:24
+:6  %sum3_cast = zext i10 %sum3 to i32
+
+ST_5: bram_addr_1 (51)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+:7  %bram_addr_1 = getelementptr [2048 x i32]* %bram, i32 0, i32 %sum3_cast
+
+ST_5: bram_load_1 (52)  [2/2] 2.71ns  loc: HLS_Predictor/core.cpp:25
+:8  %bram_load_1 = load i32* %bram_addr_1, align 4
+
+
+ <State 6>: 2.71ns
+ST_6: bram_load_1 (52)  [1/2] 2.71ns  loc: HLS_Predictor/core.cpp:25
+:8  %bram_load_1 = load i32* %bram_addr_1, align 4
+
+
+ <State 7>: 6.08ns
+ST_7: tmp_3 (53)  [6/6] 6.08ns  loc: HLS_Predictor/core.cpp:25
+:9  %tmp_3 = mul nsw i32 %bram_load, %bram_load_1
+
+
+ <State 8>: 6.08ns
+ST_8: tmp_3 (53)  [5/6] 6.08ns  loc: HLS_Predictor/core.cpp:25
+:9  %tmp_3 = mul nsw i32 %bram_load, %bram_load_1
+
+
+ <State 9>: 6.08ns
+ST_9: tmp_3 (53)  [4/6] 6.08ns  loc: HLS_Predictor/core.cpp:25
+:9  %tmp_3 = mul nsw i32 %bram_load, %bram_load_1
+
+
+ <State 10>: 6.08ns
+ST_10: tmp_3 (53)  [3/6] 6.08ns  loc: HLS_Predictor/core.cpp:25
+:9  %tmp_3 = mul nsw i32 %bram_load, %bram_load_1
+
+
+ <State 11>: 6.08ns
+ST_11: tmp_3 (53)  [2/6] 6.08ns  loc: HLS_Predictor/core.cpp:25
+:9  %tmp_3 = mul nsw i32 %bram_load, %bram_load_1
+
+
+ <State 12>: 8.40ns
+ST_12: tmp_3 (53)  [1/6] 6.08ns  loc: HLS_Predictor/core.cpp:25
+:9  %tmp_3 = mul nsw i32 %bram_load, %bram_load_1
+
+ST_12: tmp_5 (54)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+:10  %tmp_5 = call i24 @_ssdm_op_PartSelect.i24.i32.i32.i32(i32 %tmp_3, i32 8, i32 31)
+
+ST_12: tmp_5_cast (55)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:25
+:11  %tmp_5_cast = sext i24 %tmp_5 to i28
+
+ST_12: sum_2 (56)  [1/1] 2.32ns  loc: HLS_Predictor/core.cpp:25
+:12  %sum_2 = add i28 %tmp_5_cast, %sum
+
+ST_12: StgValue_94 (57)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:24
+:13  br label %.preheader8
+
+
+ <State 13>: 5.10ns
+ST_13: sigmoid_lut_load (66)  [1/2] 2.39ns  loc: HLS_Predictor/core.cpp:30
+:3  %sigmoid_lut_load = load i8* %sigmoid_lut_addr, align 1
+
+ST_13: sigmoid_lut_load_cas (67)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:30
+:4  %sigmoid_lut_load_cas = zext i8 %sigmoid_lut_load to i32
+
+ST_13: sum7_cast (70)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:22
+:7  %sum7_cast = zext i11 %sum7 to i32
+
+ST_13: bram_addr_5 (71)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:30
+:8  %bram_addr_5 = getelementptr [2048 x i32]* %bram, i32 0, i32 %sum7_cast
+
+ST_13: StgValue_99 (72)  [1/1] 2.71ns  loc: HLS_Predictor/core.cpp:30
+:9  store i32 %sigmoid_lut_load_cas, i32* %bram_addr_5, align 4
+
+ST_13: StgValue_100 (73)  [1/1] 0.00ns
+:10  br label %5
+
+ST_13: StgValue_101 (78)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:22
+:0  br label %.preheader9
+
+
+ <State 14>: 1.94ns
+ST_14: i_1 (84)  [1/1] 0.00ns
+.preheader7:0  %i_1 = phi i6 [ %i_3, %.preheader7.loopexit ], [ 0, %.preheader7.preheader ]
+
+ST_14: exitcond2 (85)  [1/1] 1.94ns  loc: HLS_Predictor/core.cpp:34
+.preheader7:1  %exitcond2 = icmp eq i6 %i_1, -32
+
+ST_14: empty_6 (86)  [1/1] 0.00ns
+.preheader7:2  %empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32) nounwind
+
+ST_14: i_3 (87)  [1/1] 1.72ns  loc: HLS_Predictor/core.cpp:34
+.preheader7:3  %i_3 = add i6 %i_1, 1
+
+ST_14: StgValue_106 (88)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:34
+.preheader7:4  br i1 %exitcond2, label %11, label %.preheader6.preheader
+
+ST_14: tmp_14 (90)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:34
+.preheader6.preheader:0  %tmp_14 = trunc i6 %i_1 to i5
+
+ST_14: tmp_1 (91)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:38
+.preheader6.preheader:1  %tmp_1 = call i9 @_ssdm_op_BitConcatenate.i9.i5.i4(i5 %tmp_14, i4 0)
+
+ST_14: tmp_1_cast (92)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:38
+.preheader6.preheader:2  %tmp_1_cast = zext i9 %tmp_1 to i11
+
+ST_14: tmp_2 (93)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:41
+.preheader6.preheader:3  %tmp_2 = call i7 @_ssdm_op_BitConcatenate.i7.i5.i2(i5 %tmp_14, i2 0)
+
+ST_14: tmp_2_cast_cast (94)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:41
+.preheader6.preheader:4  %tmp_2_cast_cast = zext i7 %tmp_2 to i10
+
+ST_14: tmp_15 (95)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:41
+.preheader6.preheader:5  %tmp_15 = or i7 %tmp_2, 3
+
+ST_14: sum5 (96)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:41
+.preheader6.preheader:6  %sum5 = call i10 @_ssdm_op_BitConcatenate.i10.i3.i7(i3 -4, i7 %tmp_15)
+
+ST_14: sum6_cast1 (97)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:41
+.preheader6.preheader:7  %sum6_cast1 = sext i10 %sum5 to i11
+
+ST_14: sum6_cast (98)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:41
+.preheader6.preheader:8  %sum6_cast = zext i11 %sum6_cast1 to i32
+
+ST_14: bram_addr_6 (99)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:41
+.preheader6.preheader:9  %bram_addr_6 = getelementptr [2048 x i32]* %bram, i32 0, i32 %sum6_cast
+
+ST_14: StgValue_117 (100)  [1/1] 1.57ns  loc: HLS_Predictor/core.cpp:35
+.preheader6.preheader:10  br label %.preheader6
+
+ST_14: StgValue_118 (161)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:47
+:0  ret void
+
+
+ <State 15>: 1.62ns
+ST_15: j_1 (102)  [1/1] 0.00ns
+.preheader6:0  %j_1 = phi i3 [ %j_3, %10 ], [ 0, %.preheader6.preheader ]
+
+ST_15: exitcond1 (103)  [1/1] 1.62ns  loc: HLS_Predictor/core.cpp:35
+.preheader6:1  %exitcond1 = icmp eq i3 %j_1, -4
+
+ST_15: empty_7 (104)  [1/1] 0.00ns
+.preheader6:2  %empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind
+
+ST_15: j_3 (105)  [1/1] 0.80ns  loc: HLS_Predictor/core.cpp:35
+.preheader6:3  %j_3 = add i3 %j_1, 1
+
+ST_15: StgValue_123 (106)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:35
+.preheader6:4  br i1 %exitcond1, label %.preheader7.loopexit, label %.preheader.preheader
+
+ST_15: tmp_17 (108)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:35
+.preheader.preheader:0  %tmp_17 = trunc i3 %j_1 to i2
+
+ST_15: tmp_6 (109)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:38
+.preheader.preheader:1  %tmp_6 = call i6 @_ssdm_op_BitConcatenate.i6.i2.i4(i2 %tmp_17, i4 0)
+
+ST_15: tmp_6_cast_cast (110)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:37
+.preheader.preheader:2  %tmp_6_cast_cast = zext i6 %tmp_6 to i9
+
+ST_15: StgValue_127 (111)  [1/1] 1.57ns  loc: HLS_Predictor/core.cpp:37
+.preheader.preheader:3  br label %.preheader
+
+ST_15: StgValue_128 (159)  [1/1] 0.00ns
+.preheader7.loopexit:0  br label %.preheader7
+
+
+ <State 16>: 4.55ns
+ST_16: k_1 (113)  [1/1] 0.00ns
+.preheader:0  %k_1 = phi i5 [ %k_3, %6 ], [ 0, %.preheader.preheader ]
+
+ST_16: sum_1 (114)  [1/1] 0.00ns
+.preheader:1  %sum_1 = phi i28 [ %sum_3, %6 ], [ 0, %.preheader.preheader ]
+
+ST_16: exitcond (115)  [1/1] 1.91ns  loc: HLS_Predictor/core.cpp:37
+.preheader:2  %exitcond = icmp eq i5 %k_1, -16
+
+ST_16: empty_8 (116)  [1/1] 0.00ns
+.preheader:3  %empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_16: k_3 (117)  [1/1] 1.72ns  loc: HLS_Predictor/core.cpp:37
+.preheader:4  %k_3 = add i5 %k_1, 1
+
+ST_16: StgValue_134 (118)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:37
+.preheader:5  br i1 %exitcond, label %7, label %6
+
+ST_16: tmp3 (120)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:37
+:0  %tmp3 = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 -32, i5 %k_1)
+
+ST_16: sum9 (121)  [1/1] 1.84ns  loc: HLS_Predictor/core.cpp:37
+:1  %sum9 = add i11 %tmp3, %tmp_1_cast
+
+ST_16: sum9_cast (122)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:37
+:2  %sum9_cast = zext i11 %sum9 to i32
+
+ST_16: bram_addr_2 (123)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:38
+:3  %bram_addr_2 = getelementptr [2048 x i32]* %bram, i32 0, i32 %sum9_cast
+
+ST_16: bram_load_2 (124)  [2/2] 2.71ns  loc: HLS_Predictor/core.cpp:38
+:4  %bram_load_2 = load i32* %bram_addr_2, align 4
+
+ST_16: tmp4 (125)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:37
+:5  %tmp4 = call i9 @_ssdm_op_BitConcatenate.i9.i4.i5(i4 -8, i5 %k_1)
+
+ST_16: sum4 (126)  [1/1] 1.84ns  loc: HLS_Predictor/core.cpp:37
+:6  %sum4 = add i9 %tmp4, %tmp_6_cast_cast
+
+ST_16: tmp_19 (137)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:37
+:0  %tmp_19 = trunc i28 %sum_1 to i15
+
+ST_16: tmp_s (138)  [1/1] 1.62ns  loc: HLS_Predictor/core.cpp:40
+:1  %tmp_s = icmp eq i3 %j_1, 3
+
+ST_16: StgValue_144 (139)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:40
+:2  br i1 %tmp_s, label %8, label %9
+
+ST_16: tmp_13 (141)  [1/1] 1.96ns  loc: HLS_Predictor/core.cpp:43
+:0  %tmp_13 = add i15 %tmp_19, 4096
+
+ST_16: tmp_19_cast (142)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:43
+:1  %tmp_19_cast = zext i15 %tmp_13 to i32
+
+ST_16: sigmoid_lut_addr_1 (143)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:43
+:2  %sigmoid_lut_addr_1 = getelementptr [8192 x i8]* @sigmoid_lut, i32 0, i32 %tmp_19_cast
+
+ST_16: sigmoid_lut_load_1 (144)  [2/2] 2.39ns  loc: HLS_Predictor/core.cpp:43
+:3  %sigmoid_lut_load_1 = load i8* %sigmoid_lut_addr_1, align 1
+
+ST_16: tmp5 (146)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:35
+:5  %tmp5 = call i10 @_ssdm_op_BitConcatenate.i10.i7.i3(i7 -64, i3 %j_1)
+
+ST_16: sum8 (147)  [1/1] 1.84ns  loc: HLS_Predictor/core.cpp:35
+:6  %sum8 = add i10 %tmp5, %tmp_2_cast_cast
+
+ST_16: StgValue_151 (154)  [1/1] 2.71ns  loc: HLS_Predictor/core.cpp:41
+:0  store i32 0, i32* %bram_addr_6, align 4
+
+ST_16: StgValue_152 (155)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:42
+:1  br label %10
+
+
+ <State 17>: 2.71ns
+ST_17: bram_load_2 (124)  [1/2] 2.71ns  loc: HLS_Predictor/core.cpp:38
+:4  %bram_load_2 = load i32* %bram_addr_2, align 4
+
+ST_17: sum4_cast1 (127)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:37
+:7  %sum4_cast1 = sext i9 %sum4 to i10
+
+ST_17: sum4_cast (128)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:37
+:8  %sum4_cast = zext i10 %sum4_cast1 to i32
+
+ST_17: bram_addr_3 (129)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:38
+:9  %bram_addr_3 = getelementptr [2048 x i32]* %bram, i32 0, i32 %sum4_cast
+
+ST_17: bram_load_3 (130)  [2/2] 2.71ns  loc: HLS_Predictor/core.cpp:38
+:10  %bram_load_3 = load i32* %bram_addr_3, align 4
+
+
+ <State 18>: 2.71ns
+ST_18: bram_load_3 (130)  [1/2] 2.71ns  loc: HLS_Predictor/core.cpp:38
+:10  %bram_load_3 = load i32* %bram_addr_3, align 4
+
+
+ <State 19>: 6.08ns
+ST_19: tmp_10 (131)  [6/6] 6.08ns  loc: HLS_Predictor/core.cpp:38
+:11  %tmp_10 = mul nsw i32 %bram_load_2, %bram_load_3
+
+
+ <State 20>: 6.08ns
+ST_20: tmp_10 (131)  [5/6] 6.08ns  loc: HLS_Predictor/core.cpp:38
+:11  %tmp_10 = mul nsw i32 %bram_load_2, %bram_load_3
+
+
+ <State 21>: 6.08ns
+ST_21: tmp_10 (131)  [4/6] 6.08ns  loc: HLS_Predictor/core.cpp:38
+:11  %tmp_10 = mul nsw i32 %bram_load_2, %bram_load_3
+
+
+ <State 22>: 6.08ns
+ST_22: tmp_10 (131)  [3/6] 6.08ns  loc: HLS_Predictor/core.cpp:38
+:11  %tmp_10 = mul nsw i32 %bram_load_2, %bram_load_3
+
+
+ <State 23>: 6.08ns
+ST_23: tmp_10 (131)  [2/6] 6.08ns  loc: HLS_Predictor/core.cpp:38
+:11  %tmp_10 = mul nsw i32 %bram_load_2, %bram_load_3
+
+
+ <State 24>: 8.40ns
+ST_24: tmp_10 (131)  [1/6] 6.08ns  loc: HLS_Predictor/core.cpp:38
+:11  %tmp_10 = mul nsw i32 %bram_load_2, %bram_load_3
+
+ST_24: tmp_12 (132)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:38
+:12  %tmp_12 = call i24 @_ssdm_op_PartSelect.i24.i32.i32.i32(i32 %tmp_10, i32 8, i32 31)
+
+ST_24: tmp_18_cast (133)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:38
+:13  %tmp_18_cast = sext i24 %tmp_12 to i28
+
+ST_24: sum_3 (134)  [1/1] 2.32ns  loc: HLS_Predictor/core.cpp:38
+:14  %sum_3 = add i28 %tmp_18_cast, %sum_1
+
+ST_24: StgValue_168 (135)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:37
+:15  br label %.preheader
+
+
+ <State 25>: 5.10ns
+ST_25: sigmoid_lut_load_1 (144)  [1/2] 2.39ns  loc: HLS_Predictor/core.cpp:43
+:3  %sigmoid_lut_load_1 = load i8* %sigmoid_lut_addr_1, align 1
+
+ST_25: sigmoid_lut_load_1_c (145)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:43
+:4  %sigmoid_lut_load_1_c = zext i8 %sigmoid_lut_load_1 to i32
+
+ST_25: sum8_cast1 (148)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:35
+:7  %sum8_cast1 = sext i10 %sum8 to i11
+
+ST_25: sum8_cast (149)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:35
+:8  %sum8_cast = zext i11 %sum8_cast1 to i32
+
+ST_25: bram_addr_7 (150)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:43
+:9  %bram_addr_7 = getelementptr [2048 x i32]* %bram, i32 0, i32 %sum8_cast
+
+ST_25: StgValue_174 (151)  [1/1] 2.71ns  loc: HLS_Predictor/core.cpp:43
+:10  store i32 %sigmoid_lut_load_1_c, i32* %bram_addr_7, align 4
+
+ST_25: StgValue_175 (152)  [1/1] 0.00ns
+:11  br label %10
+
+ST_25: StgValue_176 (157)  [1/1] 0.00ns  loc: HLS_Predictor/core.cpp:35
+:0  br label %.preheader6
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.57ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', HLS_Predictor/core.cpp:21) [10]  (1.57 ns)
+
+ <State 2>: 1.94ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', HLS_Predictor/core.cpp:21) [10]  (0 ns)
+	'icmp' operation ('exitcond5', HLS_Predictor/core.cpp:21) [11]  (1.94 ns)
+
+ <State 3>: 1.91ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', HLS_Predictor/core.cpp:22) [25]  (0 ns)
+	'icmp' operation ('exitcond4', HLS_Predictor/core.cpp:22) [26]  (1.91 ns)
+
+ <State 4>: 4.55ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', HLS_Predictor/core.cpp:24) [36]  (0 ns)
+	'add' operation ('sum1', HLS_Predictor/core.cpp:25) [44]  (1.84 ns)
+	'getelementptr' operation ('bram_addr', HLS_Predictor/core.cpp:25) [46]  (0 ns)
+	'load' operation ('bram_load', HLS_Predictor/core.cpp:25) on array 'bram' [47]  (2.71 ns)
+
+ <State 5>: 2.71ns
+The critical path consists of the following:
+	'load' operation ('bram_load', HLS_Predictor/core.cpp:25) on array 'bram' [47]  (2.71 ns)
+
+ <State 6>: 2.71ns
+The critical path consists of the following:
+	'load' operation ('bram_load_1', HLS_Predictor/core.cpp:25) on array 'bram' [52]  (2.71 ns)
+
+ <State 7>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', HLS_Predictor/core.cpp:25) [53]  (6.08 ns)
+
+ <State 8>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', HLS_Predictor/core.cpp:25) [53]  (6.08 ns)
+
+ <State 9>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', HLS_Predictor/core.cpp:25) [53]  (6.08 ns)
+
+ <State 10>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', HLS_Predictor/core.cpp:25) [53]  (6.08 ns)
+
+ <State 11>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', HLS_Predictor/core.cpp:25) [53]  (6.08 ns)
+
+ <State 12>: 8.4ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3', HLS_Predictor/core.cpp:25) [53]  (6.08 ns)
+	'add' operation ('sum', HLS_Predictor/core.cpp:25) [56]  (2.32 ns)
+
+ <State 13>: 5.1ns
+The critical path consists of the following:
+	'load' operation ('sigmoid_lut_load', HLS_Predictor/core.cpp:30) on array 'sigmoid_lut' [66]  (2.39 ns)
+	'store' operation (HLS_Predictor/core.cpp:30) of variable 'sigmoid_lut_load_cas', HLS_Predictor/core.cpp:30 on array 'bram' [72]  (2.71 ns)
+
+ <State 14>: 1.94ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', HLS_Predictor/core.cpp:34) [84]  (0 ns)
+	'icmp' operation ('exitcond2', HLS_Predictor/core.cpp:34) [85]  (1.94 ns)
+
+ <State 15>: 1.62ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', HLS_Predictor/core.cpp:35) [102]  (0 ns)
+	'icmp' operation ('exitcond1', HLS_Predictor/core.cpp:35) [103]  (1.62 ns)
+
+ <State 16>: 4.55ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', HLS_Predictor/core.cpp:37) [113]  (0 ns)
+	'add' operation ('sum9', HLS_Predictor/core.cpp:37) [121]  (1.84 ns)
+	'getelementptr' operation ('bram_addr_2', HLS_Predictor/core.cpp:38) [123]  (0 ns)
+	'load' operation ('bram_load_2', HLS_Predictor/core.cpp:38) on array 'bram' [124]  (2.71 ns)
+
+ <State 17>: 2.71ns
+The critical path consists of the following:
+	'load' operation ('bram_load_2', HLS_Predictor/core.cpp:38) on array 'bram' [124]  (2.71 ns)
+
+ <State 18>: 2.71ns
+The critical path consists of the following:
+	'load' operation ('bram_load_3', HLS_Predictor/core.cpp:38) on array 'bram' [130]  (2.71 ns)
+
+ <State 19>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_10', HLS_Predictor/core.cpp:38) [131]  (6.08 ns)
+
+ <State 20>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_10', HLS_Predictor/core.cpp:38) [131]  (6.08 ns)
+
+ <State 21>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_10', HLS_Predictor/core.cpp:38) [131]  (6.08 ns)
+
+ <State 22>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_10', HLS_Predictor/core.cpp:38) [131]  (6.08 ns)
+
+ <State 23>: 6.08ns
+The critical path consists of the following:
+	'mul' operation ('tmp_10', HLS_Predictor/core.cpp:38) [131]  (6.08 ns)
+
+ <State 24>: 8.4ns
+The critical path consists of the following:
+	'mul' operation ('tmp_10', HLS_Predictor/core.cpp:38) [131]  (6.08 ns)
+	'add' operation ('sum', HLS_Predictor/core.cpp:38) [134]  (2.32 ns)
+
+ <State 25>: 5.1ns
+The critical path consists of the following:
+	'load' operation ('sigmoid_lut_load_1', HLS_Predictor/core.cpp:43) on array 'sigmoid_lut' [144]  (2.39 ns)
+	'store' operation (HLS_Predictor/core.cpp:43) of variable 'sigmoid_lut_load_1_c', HLS_Predictor/core.cpp:43 on array 'bram' [151]  (2.71 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

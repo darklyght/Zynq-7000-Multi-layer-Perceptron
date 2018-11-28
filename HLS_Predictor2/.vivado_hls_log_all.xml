@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_22', HLS_Predictor2/core.cpp:42) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:25.060+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_18', HLS_Predictor2/core.cpp:42) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:25.024+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_3', HLS_Predictor2/core.cpp:42) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.997+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_35', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.958+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_34', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.933+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_33', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.895+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_32', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.863+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_31', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.832+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_30', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.803+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_29', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.750+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_28', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.712+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_27', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.556+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_26', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.523+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_25', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.481+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_24', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.459+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_20', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.441+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_16', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.409+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('bram_load_1', HLS_Predictor2/core.cpp:27) on array 'bram' due to limited memory ports." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:24.380+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] more than one sub loop." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:22.127+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (HLS_Predictor2/core.cpp:36:7) in function 'predictor2' : " projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:20.526+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] more than one sub loop." projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:20.475+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (HLS_Predictor2/core.cpp:21:7) in function 'predictor2' : " projectName="HLS_Predictor2" solutionName="solution1" date="2018-11-02T13:37:20.450+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

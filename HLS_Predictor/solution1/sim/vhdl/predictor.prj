@@ -1,0 +1,9 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "AESL_autobram_bram.vhd"
+vhdl xil_defaultlib "AESL_axi_slave_BUS_CTRL.vhd"
+vhdl xil_defaultlib "predictor.autotb.vhd"
+vhdl xil_defaultlib "predictor.vhd"
+vhdl xil_defaultlib "predictor_BUS_CTRL_s_axi.vhd"
+vhdl xil_defaultlib "predictor_mul_32scud.vhd"
+vhdl xil_defaultlib "predictor_sigmoidbkb.vhd"
+

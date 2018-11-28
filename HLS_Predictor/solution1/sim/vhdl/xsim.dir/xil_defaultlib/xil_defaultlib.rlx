@@ -1,0 +1,12 @@
+0.6
+2016.3
+Oct 10 2016
+19:46:48
+C:/EE4218/mlp_nn/HLS_Predictor/solution1/sim/vhdl/AESL_autobram_bram.vhd,1541134256,vhdl,,,,aesl_autobram_bram,C:/Xilinx/Vivado/2016.3/bin/../data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+C:/EE4218/mlp_nn/HLS_Predictor/solution1/sim/vhdl/AESL_axi_slave_BUS_CTRL.vhd,1541134256,vhdl,,,,aesl_axi_slave_bus_ctrl,C:/Xilinx/Vivado/2016.3/bin/../data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+C:/EE4218/mlp_nn/HLS_Predictor/solution1/sim/vhdl/AESL_sim_pkg.vhd,1541134256,vhdl,,,,aesl_sim_components,C:/Xilinx/Vivado/2016.3/bin/../data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+C:/EE4218/mlp_nn/HLS_Predictor/solution1/sim/vhdl/predictor.autotb.vhd,1541134256,vhdl,,,,apatb_predictor_top,C:/Xilinx/Vivado/2016.3/bin/../data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+C:/EE4218/mlp_nn/HLS_Predictor/solution1/sim/vhdl/predictor.vhd,1541134211,vhdl,,,,predictor,C:/Xilinx/Vivado/2016.3/bin/../data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+C:/EE4218/mlp_nn/HLS_Predictor/solution1/sim/vhdl/predictor_BUS_CTRL_s_axi.vhd,1541134213,vhdl,,,,predictor_bus_ctrl_s_axi,C:/Xilinx/Vivado/2016.3/bin/../data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+C:/EE4218/mlp_nn/HLS_Predictor/solution1/sim/vhdl/predictor_mul_32scud.vhd,1541134213,vhdl,,,,predictor_mul_32scud;predictor_mul_32scud_mulns_0,C:/Xilinx/Vivado/2016.3/bin/../data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+C:/EE4218/mlp_nn/HLS_Predictor/solution1/sim/vhdl/predictor_sigmoidbkb.vhd,1541134213,vhdl,,,,predictor_sigmoidbkb;predictor_sigmoidbkb_rom,C:/Xilinx/Vivado/2016.3/bin/../data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,

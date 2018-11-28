@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Fri Nov 02 12:51:07 2018
+# Process ID: 3548
+# Current directory: C:/EE4218/mlp_nn/HLS_Predictor/solution1/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/predictor/xsim_script.tcl}
+# Log file: C:/EE4218/mlp_nn/HLS_Predictor/solution1/sim/vhdl/xsim.log
+# Journal file: C:/EE4218/mlp_nn/HLS_Predictor/solution1/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/predictor/xsim_script.tcl
+source predictor.tcl

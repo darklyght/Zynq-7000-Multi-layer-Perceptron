@@ -1,0 +1,216 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'predictor'" level="0">
+<item name = "Date">Fri Nov 02 12:50:12 2018
+</item>
+<item name = "Version">2016.3 (Build 1682563 on Mon Oct 10 19:41:59 MDT 2016)</item>
+<item name = "Project">HLS_Predictor</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">8.40</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">94210, 94210, 94211, 94211, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">75328, 75328, 2354, -, -, 32, no</column>
+<column name=" + Loop 1.1">2352, 2352, 147, -, -, 16, no</column>
+<column name="  ++ Loop 1.1.1">144, 144, 9, -, -, 16, no</column>
+<column name="- Loop 2">18880, 18880, 590, -, -, 32, no</column>
+<column name=" + Loop 2.1">588, 588, 147, -, -, 4, no</column>
+<column name="  ++ Loop 2.1.1">144, 144, 9, -, -, 16, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 215</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">0, 4, 36, 40</column>
+<column name="Memory">4, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 220</column>
+<column name="Register">-, -, 283, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">1, 1, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="predictor_BUS_CTRL_s_axi_U">predictor_BUS_CTRL_s_axi, 0, 0, 36, 40</column>
+<column name="predictor_mul_32scud_U0">predictor_mul_32scud, 0, 4, 0, 0</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="sigmoid_lut_U">predictor_sigmoidbkb, 4, 0, 0, 8192, 8, 1, 65536</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_2_fu_316_p2">+, 0, 0, 6, 6, 1</column>
+<column name="i_3_fu_487_p2">+, 0, 0, 6, 6, 1</column>
+<column name="j_2_fu_363_p2">+, 0, 0, 5, 5, 1</column>
+<column name="j_3_fu_550_p2">+, 0, 0, 3, 3, 1</column>
+<column name="k_2_fu_395_p2">+, 0, 0, 5, 5, 1</column>
+<column name="k_3_fu_578_p2">+, 0, 0, 5, 5, 1</column>
+<column name="sum1_fu_401_p2">+, 0, 0, 9, 9, 9</column>
+<column name="sum3_fu_419_p2">+, 0, 0, 10, 10, 10</column>
+<column name="sum4_fu_610_p2">+, 0, 0, 9, 9, 9</column>
+<column name="sum7_fu_453_p2">+, 0, 0, 11, 11, 11</column>
+<column name="sum8_fu_644_p2">+, 0, 0, 10, 10, 10</column>
+<column name="sum9_fu_592_p2">+, 0, 0, 11, 11, 11</column>
+<column name="sum_2_fu_466_p2">+, 0, 0, 28, 28, 28</column>
+<column name="sum_3_fu_661_p2">+, 0, 0, 28, 28, 28</column>
+<column name="tmp_13_fu_625_p2">+, 0, 0, 15, 15, 13</column>
+<column name="tmp_9_fu_434_p2">+, 0, 0, 15, 15, 13</column>
+<column name="exitcond1_fu_544_p2">icmp, 0, 0, 2, 3, 4</column>
+<column name="exitcond2_fu_481_p2">icmp, 0, 0, 3, 6, 7</column>
+<column name="exitcond3_fu_389_p2">icmp, 0, 0, 3, 5, 6</column>
+<column name="exitcond4_fu_357_p2">icmp, 0, 0, 3, 5, 6</column>
+<column name="exitcond5_fu_310_p2">icmp, 0, 0, 3, 6, 7</column>
+<column name="exitcond_fu_572_p2">icmp, 0, 0, 3, 5, 6</column>
+<column name="tmp_7_fu_428_p2">icmp, 0, 0, 2, 5, 4</column>
+<column name="tmp_s_fu_619_p2">icmp, 0, 0, 2, 3, 2</column>
+<column name="tmp_11_fu_338_p2">or, 0, 0, 10, 9, 4</column>
+<column name="tmp_15_fu_521_p2">or, 0, 0, 8, 7, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">21, 26, 1, 26</column>
+<column name="bram_Addr_A_orig">64, 9, 32, 288</column>
+<column name="bram_Din_A">32, 5, 32, 160</column>
+<column name="bram_WEN_A">4, 2, 4, 8</column>
+<column name="i_1_reg_240">6, 2, 6, 12</column>
+<column name="i_reg_194">6, 2, 6, 12</column>
+<column name="j_1_reg_251">3, 2, 3, 6</column>
+<column name="j_reg_205">5, 2, 5, 10</column>
+<column name="k_1_reg_263">5, 2, 5, 10</column>
+<column name="k_reg_217">5, 2, 5, 10</column>
+<column name="sigmoid_lut_address0">13, 3, 13, 39</column>
+<column name="sum_1_reg_274">28, 2, 28, 56</column>
+<column name="sum_reg_228">28, 2, 28, 56</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">25, 0, 25, 0</column>
+<column name="bram_addr_4_reg_698">5, 0, 11, 6</column>
+<column name="bram_addr_6_reg_776">5, 0, 11, 6</column>
+<column name="i_1_reg_240">6, 0, 6, 0</column>
+<column name="i_2_reg_683">6, 0, 6, 0</column>
+<column name="i_3_reg_761">6, 0, 6, 0</column>
+<column name="i_reg_194">6, 0, 6, 0</column>
+<column name="j_1_reg_251">3, 0, 3, 0</column>
+<column name="j_2_reg_706">5, 0, 5, 0</column>
+<column name="j_3_reg_784">3, 0, 3, 0</column>
+<column name="j_reg_205">5, 0, 5, 0</column>
+<column name="k_1_reg_263">5, 0, 5, 0</column>
+<column name="k_2_reg_719">5, 0, 5, 0</column>
+<column name="k_3_reg_797">5, 0, 5, 0</column>
+<column name="k_reg_217">5, 0, 5, 0</column>
+<column name="reg_286">32, 0, 32, 0</column>
+<column name="reg_290">32, 0, 32, 0</column>
+<column name="sum3_reg_729">10, 0, 10, 0</column>
+<column name="sum4_reg_807">9, 0, 9, 0</column>
+<column name="sum7_reg_743">11, 0, 11, 0</column>
+<column name="sum8_reg_821">10, 0, 10, 0</column>
+<column name="sum_1_reg_274">28, 0, 28, 0</column>
+<column name="sum_reg_228">28, 0, 28, 0</column>
+<column name="tmp_1_cast_reg_766">5, 0, 11, 6</column>
+<column name="tmp_2_cast_cast_reg_771">5, 0, 10, 5</column>
+<column name="tmp_4_cast_reg_711">4, 0, 10, 6</column>
+<column name="tmp_6_cast_cast_reg_789">2, 0, 9, 7</column>
+<column name="tmp_7_reg_734">1, 0, 1, 0</column>
+<column name="tmp_cast_reg_693">5, 0, 11, 6</column>
+<column name="tmp_reg_688">5, 0, 9, 4</column>
+<column name="tmp_s_reg_812">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_BUS_CTRL_AWVALID">in, 1, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_AWREADY">out, 1, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_AWADDR">in, 4, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_WVALID">in, 1, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_WREADY">out, 1, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_WDATA">in, 32, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_WSTRB">in, 4, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_ARVALID">in, 1, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_ARREADY">out, 1, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_ARADDR">in, 4, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_RVALID">out, 1, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_RREADY">in, 1, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_RDATA">out, 32, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_RRESP">out, 2, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_BVALID">out, 1, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_BREADY">in, 1, s_axi, BUS_CTRL, return void</column>
+<column name="s_axi_BUS_CTRL_BRESP">out, 2, s_axi, BUS_CTRL, return void</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, predictor, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, predictor, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, predictor, return value</column>
+<column name="bram_Addr_A">out, 32, bram, bram, array</column>
+<column name="bram_EN_A">out, 1, bram, bram, array</column>
+<column name="bram_WEN_A">out, 4, bram, bram, array</column>
+<column name="bram_Din_A">out, 32, bram, bram, array</column>
+<column name="bram_Dout_A">in, 32, bram, bram, array</column>
+<column name="bram_Clk_A">out, 1, bram, bram, array</column>
+<column name="bram_Rst_A">out, 1, bram, bram, array</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">8.40</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'tmp_3', HLS_Predictor/core.cpp:25">mul, 6.08, 6.08, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_5', HLS_Predictor/core.cpp:25">partselect, 0.00, 6.08, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_5_cast', HLS_Predictor/core.cpp:25">sext, 0.00, 6.08, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'sum', HLS_Predictor/core.cpp:25">add, 2.32, 8.40, -, -, -, -, -, -, -, -, -, -, -</column>
+</table>
+</item>
+</section>
+</profile>
