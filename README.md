@@ -2,7 +2,7 @@
 
 Written as part of EE4218, Embedded Harware System Design.
 
-There are 6 different implementations for performing a forward pass, 1 of which is performed in software on the ARM processor of the Zynq 7000 and the rest are performed using reconfigurable logic.
+There are 6 different implementations for performing a forward pass, 1 of which is performed in software on the ARM processor of the Zynq-7000 and the rest are performed using reconfigurable logic.
 
 Check out the slides for more details about the individual implementations.
 
