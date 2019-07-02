@@ -1,4 +1,4 @@
-# EE4218-MLP-Project
+# Zynq-7000 Multi-layer Perceptron
 
 Written as part of EE4218, Embedded Harware System Design.
 
